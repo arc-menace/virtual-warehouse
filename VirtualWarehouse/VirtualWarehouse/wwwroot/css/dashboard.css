@@ -1,0 +1,13 @@
+﻿.menu-bar{
+    max-width: 15%;
+
+    border-style: solid;
+    border-width: 3px;
+    border-color: red;
+}
+
+.main-content {
+    border-style: solid;
+    border-width: 3px;
+    border-color: blue;
+}

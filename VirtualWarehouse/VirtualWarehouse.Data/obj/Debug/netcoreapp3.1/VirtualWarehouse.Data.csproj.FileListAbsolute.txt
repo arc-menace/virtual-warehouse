@@ -1,0 +1,12 @@
+C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Data\bin\Debug\netcoreapp3.1\VirtualWarehouse.Data.deps.json
+C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Data\bin\Debug\netcoreapp3.1\VirtualWarehouse.Data.dll
+C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Data\obj\Debug\netcoreapp3.1\VirtualWarehouse.Data.csprojAssemblyReference.cache
+C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Data\obj\Debug\netcoreapp3.1\VirtualWarehouse.Data.AssemblyInfoInputs.cache
+C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Data\obj\Debug\netcoreapp3.1\VirtualWarehouse.Data.AssemblyInfo.cs
+C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Data\bin\Debug\netcoreapp3.1\VirtualWarehouse.Data.runtimeconfig.json
+C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Data\bin\Debug\netcoreapp3.1\VirtualWarehouse.Data.runtimeconfig.dev.json
+C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Data\obj\Debug\netcoreapp3.1\VirtualWarehouse.Data.genruntimeconfig.cache
+C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Data\bin\Debug\netcoreapp3.1\VirtualWarehouse.Data.pdb
+C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Data\obj\Debug\netcoreapp3.1\VirtualWarehouse.Data.csproj.CoreCompileInputs.cache
+C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Data\obj\Debug\netcoreapp3.1\VirtualWarehouse.Data.dll
+C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Data\obj\Debug\netcoreapp3.1\VirtualWarehouse.Data.pdb
