@@ -1,27 +1,27 @@
-﻿@{
+﻿@model ThingDetailsViewModel
+@{
     @using VirtualWarehouse.Web.Models;
-    ViewData["Title"] = "User Dashboard";
+    ViewData["Title"] = Model.Thing.ThingName + " - Details";
 }
 
-@model DashboardViewModel
-<link rel="stylesheet" href="~/css/dashboard.css" />
 <div class="container-fluid container-fluid-no-padding">
     <div class="row">
         <div class="col menu-bar">
-            <!--This is the side menu which displays folders and options-->
+            <!--This is the side menu which displays options for thing-->
             Menu bar
         </div>
         <div class="col main-content">
-            <!--This is the main portion of the page, where the items will be displayed-->
+            <!--This is the main portion of the page, where the attributes will be displayed-->
             Main Content
-            @if (Model.Things.Any())
+            @if (Model.Thing.Attributes.Any())
             {
-                @foreach (var thing in Model.Things)
+                @foreach (var attri in Model.Thing.Attributes)
                 {
                     <div class="col-auto mb-3">
                         <div class="card" style="width: 20rem;">
                             <div class="card-body">
-                                <h5 class="card-title"><a href=@Url.Action("ThingDetails", "Home", new { id = thing.ThingId })>@thing.ThingName @thing.ThingId</a></h5>
+                                <h5 class="card-title">@attri.AttributeName</h5>
+                                @Html.Partial("~/Views/AttributesPartial/" + attri.AttributeName + ".cshtml", attri)
                             </div>
                         </div>
                     </div>

@@ -10,5 +10,11 @@ namespace VirtualWarehouse.Data.Models
         public string ThingName { get; set; }
         public List<Thing> AssociatedThings { get; set; }
         public List<ThingAttribute> Attributes { get; set; }
+
+        public Thing()
+        {
+            Attributes = new List<ThingAttribute>();
+            AssociatedThings = new List<Thing>();
+        }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace VirtualWarehouse.Data.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Inheritence : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -27,7 +27,7 @@ namespace VirtualWarehouse.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ThingAttribute",
+                name: "ThingAttributes",
                 columns: table => new
                 {
                     ThingAttributeId = table.Column<int>(type: "int", nullable: false)
@@ -40,9 +40,9 @@ namespace VirtualWarehouse.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ThingAttribute", x => x.ThingAttributeId);
+                    table.PrimaryKey("PK_ThingAttributes", x => x.ThingAttributeId);
                     table.ForeignKey(
-                        name: "FK_ThingAttribute_Things_ThingId",
+                        name: "FK_ThingAttributes_Things_ThingId",
                         column: x => x.ThingId,
                         principalTable: "Things",
                         principalColumn: "ThingId",
@@ -50,8 +50,8 @@ namespace VirtualWarehouse.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ThingAttribute_ThingId",
-                table: "ThingAttribute",
+                name: "IX_ThingAttributes_ThingId",
+                table: "ThingAttributes",
                 column: "ThingId");
 
             migrationBuilder.CreateIndex(
@@ -63,7 +63,7 @@ namespace VirtualWarehouse.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ThingAttribute");
+                name: "ThingAttributes");
 
             migrationBuilder.DropTable(
                 name: "Things");

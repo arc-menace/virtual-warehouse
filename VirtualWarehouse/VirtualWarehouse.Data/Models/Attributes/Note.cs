@@ -7,5 +7,10 @@ namespace VirtualWarehouse.Data.Models.Attributes
     public class Note : ThingAttribute
     {
         public string NoteContent { get; set; }
+
+        public Note()
+        {
+            AttributeName = "Note";
+        }
     }
 }

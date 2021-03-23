@@ -10,7 +10,7 @@ namespace VirtualWarehouse.Data.Services
         public DbSet<Thing> Things { get; set; }
         public DbSet<Note> Notes { get; set; }
         public DbSet<Description> Descriptions { get; set; }
-
+        public DbSet<ThingAttribute> ThingAttributes { get; set; }
         //Constructor
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
 

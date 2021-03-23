@@ -8,7 +8,7 @@ using VirtualWarehouse.Data.Services;
 
 namespace VirtualWarehouse.Data.Migrations
 {
-    [DbContext(typeof(DatabaseContextFactory))]
+    [DbContext(typeof(DatabaseContext))]
     partial class DatabaseContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -40,7 +40,7 @@ namespace VirtualWarehouse.Data.Migrations
 
                     b.HasIndex("ThingId");
 
-                    b.ToTable("ThingAttribute");
+                    b.ToTable("ThingAttributes");
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("ThingAttribute");
                 });

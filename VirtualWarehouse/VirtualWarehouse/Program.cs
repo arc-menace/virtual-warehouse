@@ -13,6 +13,15 @@ namespace VirtualWarehouse.Web
     {
         public static void Main(string[] args)
         {
+            try
+            {
+                SeedDatabase.Initialize();
+            }
+            catch (Exception _ex)
+            {
+                Console.WriteLine("Unable to seed database");
+                Console.WriteLine(_ex.Message);
+            }
             CreateHostBuilder(args).Build().Run();
         }
 

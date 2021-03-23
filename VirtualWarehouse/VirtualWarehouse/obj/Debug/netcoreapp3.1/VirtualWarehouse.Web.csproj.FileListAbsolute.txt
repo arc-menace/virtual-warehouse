@@ -175,3 +175,6 @@ C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse\obj\Debug\net
 C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse\obj\Debug\netcoreapp3.1\Razor\Views\Home\Dashboard.cshtml.g.cs
+C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse\obj\Debug\netcoreapp3.1\Razor\Views\Home\ThingDetails.cshtml.g.cs
+C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse\obj\Debug\netcoreapp3.1\Razor\Views\AttributesPartial\Description.cshtml.g.cs
+C:\Development\virtual-warehouse\VirtualWarehouse\VirtualWarehouse\obj\Debug\netcoreapp3.1\Razor\Views\AttributesPartial\Note.cshtml.g.cs

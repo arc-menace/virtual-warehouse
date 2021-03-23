@@ -9,9 +9,9 @@ using VirtualWarehouse.Data.Services;
 
 namespace VirtualWarehouse.Data.Migrations
 {
-    [DbContext(typeof(DatabaseContextFactory))]
-    [Migration("20210319220021_Initial")]
-    partial class Initial
+    [DbContext(typeof(DatabaseContext))]
+    [Migration("20210323174153_Inheritence")]
+    partial class Inheritence
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -42,7 +42,7 @@ namespace VirtualWarehouse.Data.Migrations
 
                     b.HasIndex("ThingId");
 
-                    b.ToTable("ThingAttribute");
+                    b.ToTable("ThingAttributes");
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("ThingAttribute");
                 });
