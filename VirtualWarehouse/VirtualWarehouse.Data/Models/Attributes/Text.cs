@@ -4,13 +4,14 @@ using System.Text;
 
 namespace VirtualWarehouse.Data.Models.Attributes
 {
-    public class Note : ThingAttribute
+    public class Text : ThingAttribute
     {
-        public string NoteContent { get; set; }
+        public string TextContent { get; set; }
 
-        public Note()
+
+        public Text()
         {
-            AttributeName = "Note";
+            AttributeType = "Text"; 
         }
     }
 }

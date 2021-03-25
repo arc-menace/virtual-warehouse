@@ -2,7 +2,7 @@
 
 namespace VirtualWarehouse.Data.Migrations
 {
-    public partial class Inheritence : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -35,8 +35,7 @@ namespace VirtualWarehouse.Data.Migrations
                     AttributeName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ThingId = table.Column<int>(type: "int", nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DescriptionContent = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    NoteContent = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    TextContent = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

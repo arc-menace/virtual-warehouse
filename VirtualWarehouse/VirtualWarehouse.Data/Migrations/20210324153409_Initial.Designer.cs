@@ -10,8 +10,8 @@ using VirtualWarehouse.Data.Services;
 namespace VirtualWarehouse.Data.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20210323174153_Inheritence")]
-    partial class Inheritence
+    [Migration("20210324153409_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -67,24 +67,14 @@ namespace VirtualWarehouse.Data.Migrations
                     b.ToTable("Things");
                 });
 
-            modelBuilder.Entity("VirtualWarehouse.Data.Models.Attributes.Description", b =>
+            modelBuilder.Entity("VirtualWarehouse.Data.Models.Attributes.Text", b =>
                 {
                     b.HasBaseType("VirtualWarehouse.Data.Models.Attributes.ThingAttribute");
 
-                    b.Property<string>("DescriptionContent")
+                    b.Property<string>("TextContent")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasDiscriminator().HasValue("Description");
-                });
-
-            modelBuilder.Entity("VirtualWarehouse.Data.Models.Attributes.Note", b =>
-                {
-                    b.HasBaseType("VirtualWarehouse.Data.Models.Attributes.ThingAttribute");
-
-                    b.Property<string>("NoteContent")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasDiscriminator().HasValue("Note");
+                    b.HasDiscriminator().HasValue("Text");
                 });
 
             modelBuilder.Entity("VirtualWarehouse.Data.Models.Attributes.ThingAttribute", b =>

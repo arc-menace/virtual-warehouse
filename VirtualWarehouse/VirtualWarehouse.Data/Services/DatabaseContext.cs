@@ -8,8 +8,7 @@ namespace VirtualWarehouse.Data.Services
     {
         //Add DbSet<> for each model that needs a table
         public DbSet<Thing> Things { get; set; }
-        public DbSet<Note> Notes { get; set; }
-        public DbSet<Description> Descriptions { get; set; }
+        public DbSet<Text> TextAttributes { get; set; }
         public DbSet<ThingAttribute> ThingAttributes { get; set; }
         //Constructor
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }

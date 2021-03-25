@@ -61,6 +61,20 @@ namespace VirtualWarehouse.Controllers
             return View(viewModel);
         }
 
+        [HttpPost]
+        public IActionResult CreateThing(string name)
+        {
+            //Create new Thing
+            Thing newThing = new Thing();
+            newThing.ThingName = name;
+            //Add to Database
+            _context.Things.Add(newThing);
+            _context.SaveChanges();
+
+            //Go to thing details page
+            return RedirectToAction("ThingDetails", "Home", new { id = newThing.ThingId });
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

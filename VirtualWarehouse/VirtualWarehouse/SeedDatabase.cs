@@ -20,8 +20,15 @@ namespace VirtualWarehouse.Web
                 {
                     ThingName = "Thing"                    
                 };
-                thing.Attributes.Add(new Note());
-                thing.Attributes.Add(new Description());
+                var notes = new Text();
+                notes.AttributeName = "Notes";
+                notes.TextContent = "This is an example note";
+                thing.Attributes.Add(notes);
+
+                var description = new Text();
+                description.AttributeName = "Description";
+                description.TextContent = "This item has a description";
+                thing.Attributes.Add(description);
 
                 context.Things.Add(thing);
                 context.SaveChanges();

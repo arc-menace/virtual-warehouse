@@ -17,11 +17,13 @@
             {
                 @foreach (var attri in Model.Thing.Attributes)
                 {
+                    string partialName = "~/Views/AttributesPartial/" + attri.AttributeType + ".cshtml";
                     <div class="col-auto mb-3">
                         <div class="card" style="width: 20rem;">
                             <div class="card-body">
                                 <h5 class="card-title">@attri.AttributeName</h5>
-                                @Html.Partial("~/Views/AttributesPartial/" + attri.AttributeName + ".cshtml", attri)
+                                <partial name=@partialName for="@attri" />
+                                
                             </div>
                         </div>
                     </div>
