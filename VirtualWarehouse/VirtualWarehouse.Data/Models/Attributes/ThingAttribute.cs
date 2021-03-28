@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using VirtualWarehouse.Data.Services;
 
 namespace VirtualWarehouse.Data.Models.Attributes
 {

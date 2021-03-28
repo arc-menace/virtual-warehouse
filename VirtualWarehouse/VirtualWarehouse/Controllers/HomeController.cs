@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using VirtualWarehouse.Data.Models;
+using VirtualWarehouse.Data.Models.Attributes;
 using VirtualWarehouse.Data.Services;
 using VirtualWarehouse.Models;
 using VirtualWarehouse.Web.Models;
@@ -74,6 +75,25 @@ namespace VirtualWarehouse.Controllers
             //Go to thing details page
             return RedirectToAction("ThingDetails", "Home", new { id = newThing.ThingId });
         }
+
+        [HttpGet]
+        public IActionResult CreateThingAttribute(string type, string name, int id)
+        {
+            var viewModel = new CreateThingAttributeViewModel();
+            viewModel.Type = type;
+            viewModel.ThingAttribute.ThingId = id;
+            viewModel.ThingAttribute.AttributeName = name;
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult CreateThingAttribute(ThingAttribute thingAttribute)
+        {
+            _context.ThingAttributes.Add(thingAttribute);
+            _context.SaveChanges();
+            return RedirectToAction("ThingDetails", "Home", new { id = thingAttribute.ThingId });
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

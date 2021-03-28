@@ -2,7 +2,10 @@
 @{
     @using VirtualWarehouse.Web.Models;
     ViewData["Title"] = Model.Thing.ThingName + " - Details";
+    string selectedAttributeType = "";
 }
+
+<link rel="stylesheet" href="~/css/dashboard.css" />
 
 <div class="container-fluid container-fluid-no-padding">
     <div class="row">
@@ -23,12 +26,61 @@
                             <div class="card-body">
                                 <h5 class="card-title">@attri.AttributeName</h5>
                                 <partial name=@partialName for="@attri" />
-                                
+
                             </div>
                         </div>
                     </div>
                 }
             }
+
+            @if (Model.AttributeTypes.Any())
+            {
+                @foreach (var att in Model.AttributeTypes)
+                {
+                    @att
+                }
+            }
+
+            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#createThingAttributeModal">+</button>
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="createThingAttributeModal" tabindex="-1" role="dialog" aria-labelledby="createThingAttributeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createThingAttributeModalLabel">Create New Attribute</h5>
+            </div>
+            <form method="get" asp-action="CreateThingAttribute" asp-controller="Home">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <select id="typeSelector" class="form-select" aria-label="Default select example">
+                            <option selected>Select Attribute Type</option>
+                            @for(int i = 0; i < Model.AttributeTypes.Count(); i++)
+                            {
+                                <option value="@i.ToString()">@Model.AttributeTypes[i]</option>
+                            }
+                        </select>
+                        <label for="newThingAttributeName">Name</label>
+                        <input type="text" class="form-control" id="newThingAttributeName" name="name" placeholder="Enter Name" required>
+                        <input type="hidden" name="id" value="@Model.Thing.ThingId" />
+                        <input type="hidden" id="hiddenType" name="type"/>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Create</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#typeSelector").change(function () {
+            $("#hiddenType").val($("#typeSelector option:selected").text());
+        })
+    });
+</script>
