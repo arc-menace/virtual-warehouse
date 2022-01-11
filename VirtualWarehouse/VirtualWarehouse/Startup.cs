@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using VirtualWarehouse.Website.Interfaces;
+using VirtualWarehouse.Website.Services;
 
 namespace VirtualWarehouse
 {
@@ -23,6 +25,9 @@ namespace VirtualWarehouse
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IHttpService, HttpService>();
+            services.AddScoped<IAssetService, AssetService>();
+
             services.AddControllersWithViews();
         }
 

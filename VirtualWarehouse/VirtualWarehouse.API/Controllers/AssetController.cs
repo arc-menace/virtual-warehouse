@@ -3,16 +3,24 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using VirtualWarehouse.Models;
+using VirtualWarehouse.Models.Models;
 
 namespace VirtualWarehouse.API.Controllers
 {
+    [ApiController]
+    [Route("[controller]/[action]")]
     public class AssetController : Controller
     {
         [HttpGet]
         public async Task<IActionResult> GetAsset(int id)
         {
-            return Ok();
+            Asset asset = new()
+            {
+                Id = id,
+                Name = "Test Asset"
+            };
+
+            return Ok(asset);
         }
 
         [HttpPost]
