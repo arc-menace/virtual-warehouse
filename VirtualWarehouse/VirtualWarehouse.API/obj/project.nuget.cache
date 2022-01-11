@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZE1wAV3+wQE6d+tVzbLxYOsiOvD1TCJXIC970tl93h15p/Qdlr7kPRcajajgcgdalAW45kQHZ6oo2hqQO+GWvA==",
+  "success": true,
+  "projectFilePath": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse.API\\VirtualWarehouse.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jmhah\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\jmhah\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\jmhah\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\jmhah\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\jmhah\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\jmhah\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}

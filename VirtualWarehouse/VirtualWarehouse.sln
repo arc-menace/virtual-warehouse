@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualWarehouse", "VirtualWarehouse\VirtualWarehouse.csproj", "{4E8BAE7A-4E97-4453-B600-39BCDA198F13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualWarehouse.Website", "VirtualWarehouse\VirtualWarehouse.Website.csproj", "{4E8BAE7A-4E97-4453-B600-39BCDA198F13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualWarehouse.API", "VirtualWarehouse.API\VirtualWarehouse.API.csproj", "{53F1A45B-0226-4385-A093-7237CA0AE763}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualWarehouse.Models", "VirtualWarehouse.Models\VirtualWarehouse.Models.csproj", "{81BEBB93-5D68-495A-8006-F7F628C8A0CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{4E8BAE7A-4E97-4453-B600-39BCDA198F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E8BAE7A-4E97-4453-B600-39BCDA198F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E8BAE7A-4E97-4453-B600-39BCDA198F13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53F1A45B-0226-4385-A093-7237CA0AE763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53F1A45B-0226-4385-A093-7237CA0AE763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53F1A45B-0226-4385-A093-7237CA0AE763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53F1A45B-0226-4385-A093-7237CA0AE763}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81BEBB93-5D68-495A-8006-F7F628C8A0CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81BEBB93-5D68-495A-8006-F7F628C8A0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81BEBB93-5D68-495A-8006-F7F628C8A0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81BEBB93-5D68-495A-8006-F7F628C8A0CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

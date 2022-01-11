@@ -1,11 +1,11 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    "net5.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    "net5.0": []
   },
   "packageFolders": {
     "C:\\Users\\jmhah\\.nuget\\packages\\": {},
@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\VirtualWarehouse.Website.csproj",
-      "projectName": "VirtualWarehouse.Website",
-      "projectPath": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\VirtualWarehouse.Website.csproj",
+      "projectUniqueName": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse.Models\\VirtualWarehouse.Models.csproj",
+      "projectName": "VirtualWarehouse.Models",
+      "projectPath": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse.Models\\VirtualWarehouse.Models.csproj",
       "packagesPath": "C:\\Users\\jmhah\\.nuget\\packages\\",
-      "outputPath": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\obj\\",
+      "outputPath": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -29,15 +29,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.1"
+        "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "projectReferences": {}
         }
       },
@@ -48,8 +48,8 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
+      "net5.0": {
+        "targetAlias": "net5.0",
         "imports": [
           "net461",
           "net462",
@@ -61,9 +61,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

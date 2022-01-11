@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wV1RTcQNp64t+6wHnN2Wp4h42+GE5q2G/xNbaJJJL2B7QA6lo9PieN550uCDRbXqs9evF9Yd63FRhADeAJ7Lug==",
+  "dgSpecHash": "moL99Rir4pJQUsYX92jRTnfxUByuuEhFh3TvlWK5KbfQeHfe3iNxuBekmKA3L1zhs/CCEGYQL6RNGQq7H/fsyg==",
   "success": true,
-  "projectFilePath": "C:\\Development\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\VirtualWarehouse.csproj",
+  "projectFilePath": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\VirtualWarehouse.Website.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

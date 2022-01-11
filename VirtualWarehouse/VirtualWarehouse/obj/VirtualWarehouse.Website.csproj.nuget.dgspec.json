@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\VirtualWarehouse.csproj": {}
+    "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\VirtualWarehouse.Website.csproj": {}
   },
   "projects": {
-    "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\VirtualWarehouse.csproj": {
+    "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\VirtualWarehouse.Website.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\VirtualWarehouse.csproj",
-        "projectName": "VirtualWarehouse",
-        "projectPath": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\VirtualWarehouse.csproj",
+        "projectUniqueName": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\VirtualWarehouse.Website.csproj",
+        "projectName": "VirtualWarehouse.Website",
+        "projectPath": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\VirtualWarehouse.Website.csproj",
         "packagesPath": "C:\\Users\\jmhah\\.nuget\\packages\\",
         "outputPath": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\obj\\",
         "projectStyle": "PackageReference",
