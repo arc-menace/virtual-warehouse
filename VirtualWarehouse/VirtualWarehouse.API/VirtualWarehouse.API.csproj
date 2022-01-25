@@ -9,10 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\Interfaces\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\VirtualWarehouse.Models\VirtualWarehouse.Models.csproj" />
   </ItemGroup>
 

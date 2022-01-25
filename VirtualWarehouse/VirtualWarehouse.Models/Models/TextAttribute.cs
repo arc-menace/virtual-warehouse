@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using VirtualWarehouse.Models.Interfaces;
 
 namespace VirtualWarehouse.Models.Models
 {
-    public class Asset
+    public class TextAttribute : IAttribute
     {
         public int Id { get; set; }
+        public int AssetId { get; set; }
         public string Name { get; set; }
-        public List<TextAttribute> TextAttributes { get; set; }
-        public List<ImageAttribute> ImageAttributes { get; set; }
+        public string Contents { get; set; }
         public Status Status { get; set; }
         public int CreatedByUserId { get; set; }
         public DateTime CreationDate { get; set; }

@@ -10,5 +10,6 @@ namespace VirtualWarehouse.Website.Interfaces
     public interface IAssetService
     {
         Task<Asset> GetAsset(HttpContext httpContext, int id);
+        Task<TextAttribute> AddTextAttribute(HttpContext httpContext, TextAttribute textAttribute);
     }
 }

@@ -24,5 +24,11 @@ namespace VirtualWarehouse.Website.Controllers
             Asset asset = await _assetService.GetAsset(HttpContext, id);
             return View(asset);
         }
+
+        public async Task<IActionResult> AddTextAttribute(TextAttribute textAttribute)
+        {
+            TextAttribute newAttribute = await _assetService.AddTextAttribute(HttpContext, textAttribute);
+            return Ok(newAttribute);
+        }
     }
 }
