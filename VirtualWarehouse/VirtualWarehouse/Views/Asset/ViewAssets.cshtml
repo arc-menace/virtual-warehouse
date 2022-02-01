@@ -1,0 +1,9 @@
+﻿@model ViewAssetsViewModel
+
+@foreach(var asset in Model.Assets)
+{
+    <div>
+        <h2>Asset Id: @asset.Id</h2>
+        <h2>Asset Name: @asset.Name</h2>
+    </div>
+}

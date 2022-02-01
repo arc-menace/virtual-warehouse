@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ELdynm1SZcHhMXvpA3KUbStodjVN76Yd3eLqrPsAfkE=",
+  "Source": "VirtualWarehouse.API",
+  "BasePath": "_content/VirtualWarehouse.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

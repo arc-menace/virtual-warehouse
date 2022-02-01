@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -11,8 +12,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VirtualWarehouse.API.Interfaces;
 using VirtualWarehouse.API.Services;
-using VirtualWarehouse.API.Services.Interfaces;
+using VirtualWarehouse.DataAccess;
 
 namespace VirtualWarehouse.API
 {
@@ -28,9 +30,14 @@ namespace VirtualWarehouse.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<ISavedImageService, SavedImageService>();
-
             services.AddControllers();
+
+            services.AddScoped<ISavedImageService, SavedImageService>();
+            services.AddScoped<IAssetService, AssetService>();
+
+            services.AddDbContext<VirtualWarehouseDbContext>(
+                options => options.UseSqlServer(VirtualWarehouseDbContext.ConnectionString));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "VirtualWarehouse.API", Version = "v1" });

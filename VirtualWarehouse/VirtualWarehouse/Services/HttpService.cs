@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Json;
+using System.Text;
 using System.Threading.Tasks;
 using VirtualWarehouse.Website.Interfaces;
 
@@ -20,24 +22,44 @@ namespace VirtualWarehouse.Website.Services
             _configuration = configuration;
         }
 
-        public Task<HttpResponseMessage> DeleteAsync(HttpContext httpContext, int id, string controller, string action)
+        public Task<HttpResponseMessage> DeleteAsync(int id, string controller, string action)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<HttpResponseMessage> GetAsync(HttpContext httpContext, int id, string controller, string action)
+        public async Task<HttpResponseMessage> GetAsync(int id, string controller, string action)
         {
-            return await _client.GetAsync(_configuration["ApiUrl"] + "/" + controller + "/" + action + "?id=" + id.ToString());
+            StringBuilder urlBuilder = new();
+            urlBuilder.Append(GenerateUrl(controller, action));
+            urlBuilder.Append("?id=");
+            urlBuilder.Append(id);
+
+            return await _client.GetAsync(urlBuilder.ToString());
         }
 
-        public Task<HttpResponseMessage> PostAsync(HttpContext httpContext, object request, string controller, string action)
+        public async Task<HttpResponseMessage> PostAsync(object request, string controller, string action)
+        {
+            return await _client.PostAsJsonAsync(
+                GenerateUrl(controller, action), 
+                request);
+        }
+
+        public Task<HttpResponseMessage> PutAsync(int id, object request, string controller, string action)
         {
             throw new NotImplementedException();
         }
 
-        public Task<HttpResponseMessage> PutAsync(HttpContext httpContext, int id, object request, string controller, string action)
+        private string GenerateUrl(string controller, string action)
         {
-            throw new NotImplementedException();
+            StringBuilder urlBuilder = new();
+
+            urlBuilder.Append(_configuration["ApiUrl"]);
+            urlBuilder.Append('/');
+            urlBuilder.Append(controller);
+            urlBuilder.Append('/');
+            urlBuilder.Append(action);
+
+            return urlBuilder.ToString();
         }
     }
 }

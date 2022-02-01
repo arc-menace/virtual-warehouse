@@ -1,0 +1,60 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = VirtualWarehouse.Website
+build_property.RootNamespace = VirtualWarehouse.Website
+build_property.ProjectDir = C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/git/virtual-warehouse/VirtualWarehouse/VirtualWarehouse/Views/Asset/AssetDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXRcQXNzZXREZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/git/virtual-warehouse/VirtualWarehouse/VirtualWarehouse/Views/Asset/CreateAsset.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXRcQ3JlYXRlQXNzZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/git/virtual-warehouse/VirtualWarehouse/VirtualWarehouse/Views/Asset/ViewAssets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXRcVmlld0Fzc2V0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/git/virtual-warehouse/VirtualWarehouse/VirtualWarehouse/Views/Attribute/AddImageAttribute.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0cmlidXRlXEFkZEltYWdlQXR0cmlidXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/git/virtual-warehouse/VirtualWarehouse/VirtualWarehouse/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/git/virtual-warehouse/VirtualWarehouse/VirtualWarehouse/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/git/virtual-warehouse/VirtualWarehouse/VirtualWarehouse/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/git/virtual-warehouse/VirtualWarehouse/VirtualWarehouse/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/git/virtual-warehouse/VirtualWarehouse/VirtualWarehouse/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/git/virtual-warehouse/VirtualWarehouse/VirtualWarehouse/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/git/virtual-warehouse/VirtualWarehouse/VirtualWarehouse/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope =

@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using VirtualWarehouse.Models.Models;
+using VirtualWarehouse.Models.Requests;
+using VirtualWarehouse.Models.ViewModels;
 using VirtualWarehouse.Website.Interfaces;
 
 namespace VirtualWarehouse.Website.Controllers
@@ -25,10 +27,49 @@ namespace VirtualWarehouse.Website.Controllers
             return View(asset);
         }
 
+        [HttpPost]
         public async Task<IActionResult> AddTextAttribute(TextAttribute textAttribute)
         {
             TextAttribute newAttribute = await _assetService.AddTextAttribute(HttpContext, textAttribute);
             return Ok(newAttribute);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ViewAssets()
+        {
+            GetAssetsRequest getAssetsRequest = new()
+            {
+                Search = "",
+                MinCreationDate = DateTime.MinValue,
+                MaxCreationDate = DateTime.MaxValue,
+                Status = Status.ACTIVE,
+                Take = 10,
+                Page = 1,
+                PageSize = 25
+            };
+
+            List<Asset> Assets = await _assetService.GetAssets(HttpContext, getAssetsRequest);
+
+            ViewAssetsViewModel viewModel = new()
+            {
+                Assets = Assets
+            };
+
+            return View(viewModel);
+        }
+
+        [HttpGet]
+        public IActionResult CreateAsset()
+        {
+            return View(new Asset());
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateAsset(Asset asset)
+        {
+            asset = await _assetService.CreateAsset(HttpContext, asset);
+
+            return RedirectToAction("AssetDetails", new { id = asset.Id });
         }
     }
 }

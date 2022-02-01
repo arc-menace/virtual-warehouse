@@ -1,0 +1,17 @@
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.DataAccess\bin\Debug\net6.0\VirtualWarehouse.DataAccess.deps.json
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.DataAccess\bin\Debug\net6.0\VirtualWarehouse.DataAccess.runtimeconfig.json
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.DataAccess\bin\Debug\net6.0\VirtualWarehouse.DataAccess.dll
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.DataAccess\bin\Debug\net6.0\ref\VirtualWarehouse.DataAccess.dll
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.DataAccess\bin\Debug\net6.0\VirtualWarehouse.DataAccess.pdb
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.DataAccess\obj\Debug\net6.0\VirtualWarehouse.DataAccess.csproj.AssemblyReference.cache
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.DataAccess\obj\Debug\net6.0\VirtualWarehouse.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.DataAccess\obj\Debug\net6.0\VirtualWarehouse.DataAccess.AssemblyInfoInputs.cache
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.DataAccess\obj\Debug\net6.0\VirtualWarehouse.DataAccess.AssemblyInfo.cs
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.DataAccess\obj\Debug\net6.0\VirtualWarehouse.DataAccess.csproj.CoreCompileInputs.cache
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.DataAccess\obj\Debug\net6.0\VirtualWarehouse.DataAccess.dll
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.DataAccess\obj\Debug\net6.0\ref\VirtualWarehouse.DataAccess.dll
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.DataAccess\obj\Debug\net6.0\VirtualWarehouse.DataAccess.pdb
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.DataAccess\obj\Debug\net6.0\VirtualWarehouse.DataAccess.genruntimeconfig.cache
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.DataAccess\bin\Debug\net6.0\VirtualWarehouse.Models.dll
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.DataAccess\bin\Debug\net6.0\VirtualWarehouse.Models.pdb
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.DataAccess\obj\Debug\net6.0\VirtualWarehouse.DataAccess.csproj.CopyComplete

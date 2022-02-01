@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using VirtualWarehouse.API.Services.Interfaces;
+using VirtualWarehouse.API.Interfaces;
 using VirtualWarehouse.Models.Models;
 
 namespace VirtualWarehouse.API.Controllers

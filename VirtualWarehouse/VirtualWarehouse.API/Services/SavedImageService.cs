@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VirtualWarehouse.API.Services.Interfaces;
+using VirtualWarehouse.API.Interfaces;
 using VirtualWarehouse.Models.Models;
 
 namespace VirtualWarehouse.API.Services
@@ -26,7 +26,7 @@ namespace VirtualWarehouse.API.Services
                 Hash = HashImage(formFile),
                 Folder = folder,
                 CreatedByUserId = userId,
-                CreatedDate = DateTime.Now,
+                CreationDate = DateTime.Now,
                 Status = Status.ACTIVE,
             };
 

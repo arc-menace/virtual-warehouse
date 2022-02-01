@@ -1,0 +1,12 @@
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Models\bin\Debug\net6.0\VirtualWarehouse.Models.deps.json
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Models\bin\Debug\net6.0\VirtualWarehouse.Models.dll
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Models\bin\Debug\net6.0\ref\VirtualWarehouse.Models.dll
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Models\bin\Debug\net6.0\VirtualWarehouse.Models.pdb
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Models\obj\Debug\net6.0\VirtualWarehouse.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Models\obj\Debug\net6.0\VirtualWarehouse.Models.AssemblyInfoInputs.cache
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Models\obj\Debug\net6.0\VirtualWarehouse.Models.AssemblyInfo.cs
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Models\obj\Debug\net6.0\VirtualWarehouse.Models.csproj.CoreCompileInputs.cache
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Models\obj\Debug\net6.0\VirtualWarehouse.Models.dll
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Models\obj\Debug\net6.0\ref\VirtualWarehouse.Models.dll
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Models\obj\Debug\net6.0\VirtualWarehouse.Models.pdb
+C:\git\virtual-warehouse\VirtualWarehouse\VirtualWarehouse.Models\obj\Debug\net6.0\VirtualWarehouse.Models.csproj.AssemblyReference.cache
