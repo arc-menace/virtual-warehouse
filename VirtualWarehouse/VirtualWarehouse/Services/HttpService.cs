@@ -2,11 +2,13 @@
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
+using VirtualWarehouse.Models.Errors;
 using VirtualWarehouse.Website.Interfaces;
 
 namespace VirtualWarehouse.Website.Services
@@ -42,6 +44,26 @@ namespace VirtualWarehouse.Website.Services
             return await _client.PostAsJsonAsync(
                 GenerateUrl(controller, action), 
                 request);
+        }
+
+        public Task<HttpResponseMessage> PostFileAsync(IFormFile formFile, string controller, string action)
+        {
+            if (formFile.Length > 0)
+            {
+                using (var ms = new MemoryStream())
+                {
+                    formFile.CopyTo(ms);
+                    byte[] fileBytes = ms.ToArray();
+                    ByteArrayContent byteArrayContent = new(fileBytes);
+
+                    MultipartFormDataContent multipartFormDataContent = new();
+                    multipartFormDataContent.Add(byteArrayContent, "formFile", formFile.FileName);
+
+                    return _client.PostAsync(GenerateUrl(controller, action), byteArrayContent);
+                }
+            }
+
+            throw new VWException(ExceptionCode.EmptyFile);
         }
 
         public Task<HttpResponseMessage> PutAsync(int id, object request, string controller, string action)

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xye1O0HbiTz67QCdCa2asVUocQ5YjUBkl/UB1EzhTW4=",
+  "Hash": "ov3NKlgn0PRrilGFUe4a+c3uelk6CbO4q7GaiBInzZ8=",
   "Source": "VirtualWarehouse.Website",
   "BasePath": "_content/VirtualWarehouse.Website",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\wwwroot\\css\\attributes\\imageAttibute.css",
+      "SourceId": "VirtualWarehouse.Website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\wwwroot\\",
+      "BasePath": "_content/VirtualWarehouse.Website",
+      "RelativePath": "css/attributes/imageAttibute.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\attributes\\imageAttibute.css"
+    },
+    {
+      "Identity": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\wwwroot\\css\\error.css",
+      "SourceId": "VirtualWarehouse.Website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\wwwroot\\",
+      "BasePath": "_content/VirtualWarehouse.Website",
+      "RelativePath": "css/error.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\error.css"
+    },
     {
       "Identity": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\wwwroot\\css\\site.css",
       "SourceId": "VirtualWarehouse.Website",
@@ -51,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\wwwroot\\js\\site.js",
+      "Identity": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\wwwroot\\js\\attributes\\imageAttribute.js",
       "SourceId": "VirtualWarehouse.Website",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\wwwroot\\",
       "BasePath": "_content/VirtualWarehouse.Website",
-      "RelativePath": "js/site.js",
+      "RelativePath": "js/attributes/imageAttribute.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,7 +99,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
+      "OriginalItemSpec": "wwwroot\\js\\attributes\\imageAttribute.js"
+    },
+    {
+      "Identity": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\wwwroot\\js\\errorMessage.js",
+      "SourceId": "VirtualWarehouse.Website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\wwwroot\\",
+      "BasePath": "_content/VirtualWarehouse.Website",
+      "RelativePath": "js/errorMessage.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\errorMessage.js"
     },
     {
       "Identity": "C:\\git\\virtual-warehouse\\VirtualWarehouse\\VirtualWarehouse\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

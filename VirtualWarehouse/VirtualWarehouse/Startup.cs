@@ -29,6 +29,7 @@ namespace VirtualWarehouse
 
             services.AddScoped<IHttpService, HttpService>();
             services.AddScoped<IAssetService, AssetService>();
+            services.AddScoped<IImageService, ImageService>();
 
             services.AddControllersWithViews();
         }

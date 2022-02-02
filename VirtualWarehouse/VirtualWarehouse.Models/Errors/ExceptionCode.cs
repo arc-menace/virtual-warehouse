@@ -12,12 +12,17 @@ namespace VirtualWarehouse.Models.Errors
         public string Message { get; private set; }
         
         private ExceptionCode(int suggestedHttpResponse, 
-            string message)
+            string publicMessage)
         {
             SuggestedHttpResponse = suggestedHttpResponse;
-            Message = message;
+            Message = publicMessage;
         }
 
-        public static ExceptionCode UnknownError { get { return new ExceptionCode(500, "An unknown error occured."); } }
+        //Server Errors
+        public static ExceptionCode UnknownError { get { return new ExceptionCode(500, "An unknown error occured"); } }
+        public static ExceptionCode InvalidApiResponse { get { return new ExceptionCode(500, UnknownError.Message); } }
+
+        //Client Errors
+        public static ExceptionCode EmptyFile { get { return new ExceptionCode(400, "File cannot be empty"); } }
     }
 }

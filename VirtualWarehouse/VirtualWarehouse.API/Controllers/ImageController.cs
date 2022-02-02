@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using VirtualWarehouse.API.Interfaces;
 using VirtualWarehouse.Models.Models;
+using VirtualWarehouse.Models.ViewModels;
 
 namespace VirtualWarehouse.API.Controllers
 {
@@ -25,7 +26,7 @@ namespace VirtualWarehouse.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> SaveImage(IFormFile formFile)
+        public async Task<IActionResult> SaveImage([FromForm] IFormFile formFile)
         {
             SavedImage savedImage = await _savedImageService.CreateSavedImage(
                 formFile,
@@ -33,7 +34,14 @@ namespace VirtualWarehouse.API.Controllers
                 "virtualWarehouse",
                 0);
 
-            return Ok(savedImage);
+            SavedImageViewModel viewModel = new()
+            {
+                Id = savedImage.Id,
+                externalUrl = savedImage.ExternalUrl,
+                fileName = savedImage.OriginalFileName
+            };
+
+            return Ok(viewModel);
         }
 
         [HttpGet]

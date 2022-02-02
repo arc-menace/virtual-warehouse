@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using VirtualWarehouse.Models.Errors;
 using VirtualWarehouse.Models.Interfaces;
 using VirtualWarehouse.Models.Models;
 using VirtualWarehouse.Website.Interfaces;
@@ -23,14 +24,21 @@ namespace VirtualWarehouse.Website.Services
         {
             HttpResponseMessage response = await _httpService.PostAsync(attribute, "Attribute", "CreateImageAttribute");
 
-            if(response.IsSuccessStatusCode)
+            if(response is not null)
             {
                 string responseContent = await response.Content.ReadAsStringAsync();
-
-                return JsonConvert.DeserializeObject<ImageAttribute>(responseContent);
+                if (response.IsSuccessStatusCode)
+                {
+                    return JsonConvert.DeserializeObject<ImageAttribute>(responseContent);
+                }
+                else
+                {
+                    ApiErrorResponse errorResponse = JsonConvert.DeserializeObject<ApiErrorResponse>(responseContent);
+                    throw new VWException(errorResponse.ExceptionCode);
+                }
             }
 
-            throw new Exception();
+            throw new VWException(ExceptionCode.UnknownError);
         }
 
         public async Task<ImageAttribute> GetAttribute(int id)

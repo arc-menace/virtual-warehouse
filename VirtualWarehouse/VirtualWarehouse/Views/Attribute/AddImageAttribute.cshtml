@@ -1,5 +1,14 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@model ImageAttribute
+
+@section Styles {
+    <link href="~/css/attributes/imageAttibute.css" />
+}
+
+<div id="addImageErrorMessage" class="errorMessage alert"></div>
+<img id="newImage" width="400" class="newImage"/>
+<input type="hidden" id="newImageId" />
+<input type="file" accept=".png, .jpg, .jpeg, .tif, .tiff, .gif, .bmp" id="newImageUpload" />
+
+@section Scripts {
+    <script src="~/js/attributes/imageAttribute.js"></script>
 }
