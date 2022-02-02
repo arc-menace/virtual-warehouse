@@ -6,12 +6,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VirtualWarehouse.API.Interfaces;
+using VirtualWarehouse.DataAccess;
 using VirtualWarehouse.Models.Models;
 
 namespace VirtualWarehouse.API.Services
 {
     public class SavedImageService : ISavedImageService
     {
+        private readonly VirtualWarehouseDbContext _dbContext;
+
+        public SavedImageService(VirtualWarehouseDbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
         public async Task<SavedImage> CreateSavedImage(IFormFile formFile, 
             string basePath, 
             string folder, 
@@ -44,6 +52,9 @@ namespace VirtualWarehouse.API.Services
 
             using FileStream fileStream = new(pathBuilder.ToString(), FileMode.Create);
             await formFile.CopyToAsync(fileStream);
+
+            _dbContext.SavedImages.Add(newImage);
+            await _dbContext.SaveChangesAsync();
 
             return newImage;
         }

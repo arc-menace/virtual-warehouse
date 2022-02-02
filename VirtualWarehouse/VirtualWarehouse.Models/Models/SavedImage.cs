@@ -20,6 +20,8 @@ namespace VirtualWarehouse.Models.Models
 
         [NotMapped]
         public string Base64Image { get; set; }
+        [NotMapped]
+        public string ExternalUrl { get; set; }
 
         public int CreatedByUserId { get; set; }
         public DateTime CreationDate { get; set; }
