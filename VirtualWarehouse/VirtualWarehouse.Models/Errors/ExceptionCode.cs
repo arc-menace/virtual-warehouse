@@ -24,5 +24,6 @@ namespace VirtualWarehouse.Models.Errors
 
         //Client Errors
         public static ExceptionCode EmptyFile { get { return new ExceptionCode(400, "File cannot be empty"); } }
+        public static ExceptionCode FileDoesNotExist { get { return new ExceptionCode(404, "Requested file does not exist"); } }
     }
 }

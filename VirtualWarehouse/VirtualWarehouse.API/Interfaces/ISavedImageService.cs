@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using VirtualWarehouse.Models.Models;
@@ -15,6 +16,7 @@ namespace VirtualWarehouse.API.Interfaces
             int userId,
             string overrideFileName = null);
         public SavedImage GetSavedImageByAccessKey(Guid AccessKey);
+        public Stream GetImageStream(Guid AccessKey);
         public byte[] HashImage(byte[] imageBytes);
         public byte[] HashImage(IFormFile formFile);
         public bool HashesMatch(byte[] hash1, byte[] hash2);

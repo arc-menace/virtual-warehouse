@@ -1,12 +1,15 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using VirtualWarehouse.API.Interfaces;
 using VirtualWarehouse.DataAccess;
+using VirtualWarehouse.Models.Errors;
 using VirtualWarehouse.Models.Models;
 
 namespace VirtualWarehouse.API.Services
@@ -14,10 +17,35 @@ namespace VirtualWarehouse.API.Services
     public class SavedImageService : ISavedImageService
     {
         private readonly VirtualWarehouseDbContext _dbContext;
+        private readonly IConfiguration _config;
 
-        public SavedImageService(VirtualWarehouseDbContext dbContext)
+        public SavedImageService(VirtualWarehouseDbContext dbContext,
+            IConfiguration config)
         {
             _dbContext = dbContext;
+            _config = config;
+        }
+
+        public Stream GetImageStream(Guid AccessKey)
+        {
+            SavedImage savedImage = GetSavedImageByAccessKey(AccessKey);
+            if(savedImage is null)
+            {
+                throw new VWException(ExceptionCode.FileDoesNotExist);
+            }
+
+            string filePath = _config["ImageDirectory"];
+            string fileName = savedImage.SafeFileName;
+            string extension = savedImage.GetFileExtension();
+            StringBuilder pathBuilder = new();
+            pathBuilder.Append(filePath);
+            pathBuilder.Append(Path.DirectorySeparatorChar);
+            pathBuilder.Append(savedImage.Folder);
+            pathBuilder.Append(Path.DirectorySeparatorChar);
+            pathBuilder.Append(fileName);
+            pathBuilder.Append(extension);
+
+            return File.OpenRead(pathBuilder.ToString());
         }
 
         public async Task<SavedImage> CreateSavedImage(IFormFile formFile, 
@@ -56,12 +84,23 @@ namespace VirtualWarehouse.API.Services
             _dbContext.SavedImages.Add(newImage);
             await _dbContext.SaveChangesAsync();
 
+            newImage.ExternalUrl = GenerateUrl(newImage);
+
             return newImage;
         }
 
         public SavedImage GetSavedImageByAccessKey(Guid AccessKey)
         {
-            throw new NotImplementedException();
+            SavedImage savedImage = _dbContext.SavedImages
+                .Where(x => x.AccessKey == AccessKey)
+                .FirstOrDefault();
+
+            if(savedImage is null)
+            {
+                throw new VWException(ExceptionCode.FileDoesNotExist);
+            }
+
+            return savedImage;
         }
         
         //Iterates through the hashes looking for inconsistencies.
@@ -88,7 +127,7 @@ namespace VirtualWarehouse.API.Services
 
         public byte[] HashImage(byte[] imageBytes)
         {
-            using var sha1 = new System.Security.Cryptography.SHA1CryptoServiceProvider();
+            using var sha1 = SHA1.Create();
             var hash = sha1.ComputeHash(imageBytes);
             return sha1.ComputeHash(imageBytes);
         }
@@ -110,6 +149,16 @@ namespace VirtualWarehouse.API.Services
         public bool ImagesMatch(SavedImage image1, SavedImage image2)
         {
             return HashesMatch(image1.Hash, image2.Hash);
+        }
+
+        public string GenerateUrl(SavedImage image)
+        {
+            StringBuilder stringBuilder = new();
+            stringBuilder.Append(_config["ApiUrl"]);
+            stringBuilder.Append("/Image/GetImage?AccessKey=");
+            stringBuilder.Append(image.AccessKey);
+
+            return stringBuilder.ToString();
         }
     }
 }

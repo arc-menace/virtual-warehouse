@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,24 +47,29 @@ namespace VirtualWarehouse.Website.Services
                 request);
         }
 
-        public Task<HttpResponseMessage> PostFileAsync(IFormFile formFile, string controller, string action)
+        public async Task<HttpResponseMessage> PostFileAsync(IFormFile formFile, string controller, string action)
         {
-            if (formFile.Length > 0)
-            {
-                using (var ms = new MemoryStream())
+            using MultipartFormDataContent content = new();
+            content.Add(
+                new StreamContent(formFile.OpenReadStream())
                 {
-                    formFile.CopyTo(ms);
-                    byte[] fileBytes = ms.ToArray();
-                    ByteArrayContent byteArrayContent = new(fileBytes);
+                    Headers =
+                    {
+                        ContentLength = formFile.Length,
+                        ContentType = new MediaTypeHeaderValue(formFile.ContentType)
+                    }
+                },
+                "formFile",
+                formFile.FileName);
 
-                    MultipartFormDataContent multipartFormDataContent = new();
-                    multipartFormDataContent.Add(byteArrayContent, "formFile", formFile.FileName);
+            HttpResponseMessage response = await _client.PostAsync(GenerateUrl(controller, action), content);
 
-                    return _client.PostAsync(GenerateUrl(controller, action), byteArrayContent);
-                }
+            if(response is null)
+            {
+                throw new VWException(ExceptionCode.InvalidApiResponse);
             }
 
-            throw new VWException(ExceptionCode.EmptyFile);
+            return response;
         }
 
         public Task<HttpResponseMessage> PutAsync(int id, object request, string controller, string action)

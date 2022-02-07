@@ -24,7 +24,7 @@ namespace VirtualWarehouse.Website.Services
         {
             if(formFile != null && formFile.Length > 0)
             {
-                HttpResponseMessage response = await _httpService.PostAsync(formFile, "Image", "SaveImage");
+                HttpResponseMessage response = await _httpService.PostFileAsync(formFile, "Image", "SaveImage");
 
                 if(response is not null)
                 {
