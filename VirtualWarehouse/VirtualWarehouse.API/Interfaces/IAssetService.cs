@@ -13,5 +13,13 @@ namespace VirtualWarehouse.API.Interfaces
         public Task<Asset> UpdateAsset(int id, Asset asset);
         public Asset GetAssetById(int id);
         public List<Asset> GetAllAssets(GetAssetsRequest getAssetsRequest);
+        public List<Asset> GetAllAssets(
+            int take,
+            int page,
+            int pageSize,
+            string search = "", 
+            DateTime? minCreationDate = null, 
+            DateTime? maxCreationDate = null, 
+            Status status = Status.ACTIVE);
     }
 }

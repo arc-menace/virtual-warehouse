@@ -18,5 +18,7 @@ namespace VirtualWarehouse.Models.Models
         public DateTime CreationDate { get; set; }
         public int? LastUpdatedByUserId { get; set; }
         public DateTime? LastUpdatedDate { get; set; }
+
+        public List<HistoryAttributeItem> HistoryAttributeItems { get; set; }
     }
 }

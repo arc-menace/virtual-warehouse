@@ -8,6 +8,12 @@ namespace VirtualWarehouse.Models.Errors
 {
     public class ApiErrorResponse
     {
-        public ExceptionCode ExceptionCode { get; set; }
+        public ApiErrorResponse() { }
+        public ApiErrorResponse(ErrorCode errorCode)
+        {
+            ErrorCode = errorCode;
+        }
+
+        public ErrorCode ErrorCode { get; set; }
     }
 }

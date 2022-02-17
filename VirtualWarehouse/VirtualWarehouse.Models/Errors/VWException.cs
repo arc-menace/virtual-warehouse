@@ -8,16 +8,16 @@ namespace VirtualWarehouse.Models.Errors
 {
     public class VWException : Exception
     {
-        public ExceptionCode ExceptionCode { get; set; }
+        public ErrorCode ErrorCode { get; set; }
 
-        public VWException(ExceptionCode exceptionCode)
+        public VWException(ErrorCode errorCode)
         {
-            ExceptionCode = exceptionCode;
+            ErrorCode = errorCode;
         }
 
         public override string ToString()
         {
-            return ExceptionCode.Message;
+            return ErrorCode.Message;
         }
     }
 }

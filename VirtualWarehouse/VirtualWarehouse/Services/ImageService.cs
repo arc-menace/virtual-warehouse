@@ -37,7 +37,7 @@ namespace VirtualWarehouse.Website.Services
                     else
                     {
                         ApiErrorResponse apiErrorResponse = JsonConvert.DeserializeObject<ApiErrorResponse>(responseContent);
-                        throw new VWException(apiErrorResponse.ExceptionCode);
+                        throw new VWException(apiErrorResponse.ErrorCode);
                     }
                 }
             }
@@ -46,7 +46,7 @@ namespace VirtualWarehouse.Website.Services
                 return new SavedImageViewModel();
             }
 
-            throw new VWException(ExceptionCode.UnknownError);
+            throw new VWException(ErrorCode.UnknownError);
         }
     }
 }

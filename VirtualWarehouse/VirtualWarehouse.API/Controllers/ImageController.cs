@@ -60,14 +60,14 @@ namespace VirtualWarehouse.API.Controllers
             }
             catch(VWException _ex)
             {
-                _logger.LogError(_ex.ExceptionCode.Message);
+                _logger.LogError(_ex.ErrorCode.Message);
 
                 ApiErrorResponse apiErrorResponse = new()
                 {
-                    ExceptionCode = _ex.ExceptionCode
+                    ErrorCode = _ex.ErrorCode
                 };
 
-                return StatusCode(_ex.ExceptionCode.SuggestedHttpResponse, apiErrorResponse);
+                return StatusCode(_ex.ErrorCode.SuggestedHttpResponse, apiErrorResponse);
             }
             catch(Exception _ex)
             {
@@ -75,7 +75,7 @@ namespace VirtualWarehouse.API.Controllers
 
                 ApiErrorResponse apiErrorResponse = new()
                 { 
-                    ExceptionCode = ExceptionCode.UnknownError
+                    ErrorCode = ErrorCode.UnknownError
                 };
 
                 return StatusCode(500, apiErrorResponse);

@@ -66,7 +66,7 @@ namespace VirtualWarehouse.Website.Services
 
             if(response is null)
             {
-                throw new VWException(ExceptionCode.InvalidApiResponse);
+                throw new VWException(ErrorCode.InvalidApiResponse);
             }
 
             return response;

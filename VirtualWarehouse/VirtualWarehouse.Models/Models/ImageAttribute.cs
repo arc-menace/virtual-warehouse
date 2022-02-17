@@ -13,6 +13,8 @@ namespace VirtualWarehouse.Models.Models
         public Asset Asset { get; set; }
         public int? AssetId { get; set; }
         public string Name { get; set; }
+        public SavedImage SavedImage { get; set; }
+        public int? SavedImageId { get; set; }
         public Status Status { get; set; }
         public int CreatedByUserId { get; set; }
         public DateTime CreationDate { get; set; }

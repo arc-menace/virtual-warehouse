@@ -18,6 +18,7 @@ namespace VirtualWarehouse.Models.Models
 
         public List<TextAttribute> TextAttributes { get; set; }
         public List<ImageAttribute> ImageAttributes { get; set; }
+        public List<HistoryAttribute> HistoryAttributes { get; set; }
         public List<Asset> ChildAssets { get; set; }
     }
 }

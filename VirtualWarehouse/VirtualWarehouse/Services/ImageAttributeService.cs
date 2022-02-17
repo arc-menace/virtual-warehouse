@@ -34,11 +34,11 @@ namespace VirtualWarehouse.Website.Services
                 else
                 {
                     ApiErrorResponse errorResponse = JsonConvert.DeserializeObject<ApiErrorResponse>(responseContent);
-                    throw new VWException(errorResponse.ExceptionCode);
+                    throw new VWException(errorResponse.ErrorCode);
                 }
             }
 
-            throw new VWException(ExceptionCode.UnknownError);
+            throw new VWException(ErrorCode.UnknownError);
         }
 
         public async Task<ImageAttribute> GetAttribute(int id)

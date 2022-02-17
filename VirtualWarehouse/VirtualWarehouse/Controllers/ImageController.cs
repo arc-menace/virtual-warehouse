@@ -33,13 +33,13 @@ namespace VirtualWarehouse.Website.Controllers
             }
             catch(VWException _ex)
             {
-                _logger.LogError(_ex.ExceptionCode.Message);
-                return StatusCode(_ex.ExceptionCode.SuggestedHttpResponse, _ex.ExceptionCode.Message);
+                _logger.LogError(_ex.ErrorCode.Message);
+                return StatusCode(_ex.ErrorCode.SuggestedHttpResponse, _ex.ErrorCode.Message);
             }
             catch (Exception _ex)
             {
                 _logger.LogError(_ex.Message);
-                return StatusCode(500, ExceptionCode.UnknownError.Message);
+                return StatusCode(500, ErrorCode.UnknownError.Message);
             }
         }
     }

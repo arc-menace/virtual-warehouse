@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using VirtualWarehouse.API.Interfaces;
+using VirtualWarehouse.Models.Errors;
 using VirtualWarehouse.Models.Models;
 using VirtualWarehouse.Models.Requests;
 
@@ -27,15 +28,40 @@ namespace VirtualWarehouse.API.Controllers
         [HttpGet]
         public IActionResult GetAsset(int id)
         {
-            Asset asset = _assetService.GetAssetById(id);
-            return Ok(asset);
+            try
+            {
+                _logger.LogInformation("HttpGet GetAsset for id {Id}", id);
+
+                Asset asset = _assetService.GetAssetById(id);
+                return Ok(asset);
+            }
+            catch(VWException ex)
+            {
+                _logger.LogError(ex, ex.ErrorCode.Message);
+                return StatusCode(ex.ErrorCode.SuggestedHttpResponse, new ApiErrorResponse(ex.ErrorCode));
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError(ex, "HttpGet GetAsset id={Id}: {ExceptionMessage}", id, ex.Message);
+
+                return StatusCode(500, new ApiErrorResponse(ErrorCode.UnknownError));
+            }
         }
 
         [HttpPost]
         public IActionResult GetAssets(GetAssetsRequest getAssetsRequest)
         {
-            List<Asset> assets = _assetService.GetAllAssets(getAssetsRequest);
+            _logger.LogInformation("HttpPost GetAssets Take={Take} Page={Page} " +
+                "PageSize={PageSize} MinCreationDate={MinCreationDate} " +
+                "MaxCreationDate={MaxCreationDate} Status={Status}",
+                getAssetsRequest.Take,
+                getAssetsRequest.Page,
+                getAssetsRequest.PageSize,
+                getAssetsRequest.MinCreationDate,
+                getAssetsRequest.MaxCreationDate,
+                getAssetsRequest.Status);
 
+            List<Asset> assets = _assetService.GetAllAssets(getAssetsRequest);
             return Ok(assets);
         }
 

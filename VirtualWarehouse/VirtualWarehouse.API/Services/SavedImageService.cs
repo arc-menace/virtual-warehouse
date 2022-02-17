@@ -31,7 +31,7 @@ namespace VirtualWarehouse.API.Services
             SavedImage savedImage = GetSavedImageByAccessKey(AccessKey);
             if(savedImage is null)
             {
-                throw new VWException(ExceptionCode.FileDoesNotExist);
+                throw new VWException(ErrorCode.FileDoesNotExist);
             }
 
             string filePath = _config["ImageDirectory"];
@@ -97,7 +97,7 @@ namespace VirtualWarehouse.API.Services
 
             if(savedImage is null)
             {
-                throw new VWException(ExceptionCode.FileDoesNotExist);
+                throw new VWException(ErrorCode.FileDoesNotExist);
             }
 
             return savedImage;
